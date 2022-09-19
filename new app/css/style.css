@@ -1,0 +1,190 @@
+:root{
+  --primary: #230A65;
+  --secondary: #EF03FD;
+  --tertiary: #Fcfcfc;
+  --secondaryShade: #e9a7ec;
+  --primaryShade: #120633;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  overflow-x: hidden;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+ 
+  nav{
+    z-index: 9999;
+  }
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-slide:hover> h3{
+    opacity: 1;
+    transition: all 1s ease;
+  }
+
+.techItem:hover{
+  box-shadow: 6px 6px 0px var(--secondary);
+  transform: translate(-0.3rem,-0.3rem);
+  transition: all 0.5s ease;
+
+}
+
+.home-img{
+  justify-self: center;
+}
+.home-obj{
+  filter: blur(50px);
+  clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+  /* clip-path: polygon(50% 0%, 90% 20%, 89% 61%, 75% 100%, 25% 100%, 13% 61%, 10% 20%); */
+}
+
+.handWave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+.flowerImg{
+  animation: spining 4s linear infinite;
+}
+
+@keyframes spining {
+  0%,100%{transform: rotate(0deg)}
+  100%{transform: rotate(360deg)}
+}
+
+#home{
+  overflow: hidden;
+}
+
+.homeText{
+  z-index: 100;
+}
+
+.shape1{
+  content: '';
+  height: 200px;
+  width: 200px;
+  background: var(--secondary);
+  position: absolute;
+  z-index: 1;
+  border-radius: 74% 26% 46% 54% / 30% 30% 70% 70% ;
+  filter: blur(100px);
+}
+.shape2{
+  height: 100px;
+  width: 100px;
+  background: var(--secondary);
+  position: absolute;
+  left: 0;
+  top: -100px;
+  z-index: 1;
+  border-radius: 74% 26% 46% 54% / 30% 30% 70% 70% ;
+  filter: blur(50px);
+}
+.shape3{
+  height: 300px;
+  width: 300px;
+  background: var(--secondary);
+  position: absolute;
+  left: -30%;
+  bottom: -100px;
+  z-index: 1;
+  border-radius: 74% 26% 46% 54% / 30% 30% 70% 70% ;
+  filter: blur(150px);
+}
+.arrowImg{
+  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+.fImg1{
+  top: -52;
+  left: 10%;
+  filter: blur(2px);
+}
+
+.fImg2{
+  bottom: 20%;
+  right: 10%;
+  filter: blur(2px);
+
+}
+.fImg3{
+  bottom: 5%;
+  left: 5%;
+  filter: blur(1px);
+  animation: spining 5s linear infinite;
+}
+#whatIDo{
+  z-index: 1;
+}
+.doImg1{
+  left: 1%;
+  top: 20%;
+  filter: blur(2px);
+  z-index: -1;
+}
+.doImg2{
+  right: 1%;
+  bottom: 5%;
+  filter: blur(2px);
+  z-index: -1;
+}
+
+.projectsHeading{
+  background-image: url("/img/benyafez-studio-_j3o_uUCeis-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.projectItem:hover{
+  box-shadow: 6px 6px 0px var(--secondary);
+  transform: translate(-0.3rem,-0.3rem);
+  transition: all 0.5s ease;
+}
+
+@media (max-width:480px) {
+  .shape1{
+    height: 150px;
+    width: 150px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  height: 0;
+  border-radius: 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(12, 1, 37);
+}
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
